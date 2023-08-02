@@ -12,10 +12,10 @@ export class LinksController {
   async shortifyLink(req: Request, res: Response, next : NextFunction) {
     const {link}: {link?: string} = req.body;
     const newLink = await this.LinksService.shortify(link as string, next);
-    return res.json({newLink});
+    return res.header("Access-Control-Allow-Origin", "*").json({newLink});
   }
 }
 
-const ticketsController = new LinksController(new LinksService());
+const linksController = new LinksController(new LinksService());
 
-export default ticketsController;
+export default linksController;

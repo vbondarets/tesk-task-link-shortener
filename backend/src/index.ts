@@ -15,13 +15,7 @@ const HOST = process.env.HOST ? process.env.HOST : 'localhost';
 export const app: Application = express();
 const router = new AppRouter(app);
 
-
-app.use(cors({
-    origin: ["https://link-shortify",HOST],
-    methods: ["GET", "POST", "PATCH", 'DELETE'],
-    credentials: true,
-    exposedHeaders: ['Authorization']
-  }));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 router.init();

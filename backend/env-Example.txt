@@ -1,0 +1,3 @@
+HOST=localhost
+PORT=5000
+MONGO_HOST=mongodb+srv://vbondarets:<password>@test-tasks.hnfqtls.mongodb.net/linkShort?retryWrites=true&w=majority
