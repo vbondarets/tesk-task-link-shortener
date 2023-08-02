@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@types/joi": "^17.2.3",
+    "joi": "^17.9.2",
+    "nanoid": "^4.0.2"
+  }
+}
